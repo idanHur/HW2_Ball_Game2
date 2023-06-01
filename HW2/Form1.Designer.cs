@@ -76,6 +76,7 @@
             toolStripButton2.Name = "toolStripButton2";
             toolStripButton2.Size = new Size(24, 29);
             toolStripButton2.Text = "-";
+            toolStripButton2.Click += toolStripButton2_Click;
             // 
             // toolStripButton3
             // 
@@ -86,6 +87,7 @@
             toolStripButton3.Name = "toolStripButton3";
             toolStripButton3.Size = new Size(23, 29);
             toolStripButton3.Text = "toolStripButton3";
+            toolStripButton3.Click += toolStripButton3_Click;
             // 
             // toolStripButton4
             // 
@@ -97,6 +99,7 @@
             toolStripButton4.Name = "toolStripButton4";
             toolStripButton4.Size = new Size(27, 29);
             toolStripButton4.Text = "S";
+            toolStripButton4.Click += toolStripButton4_Click;
             // 
             // toolStripButton5
             // 
@@ -108,6 +111,7 @@
             toolStripButton5.Name = "toolStripButton5";
             toolStripButton5.Size = new Size(106, 29);
             toolStripButton5.Text = "End Game";
+            toolStripButton5.Click += toolStripButton5_Click;
             // 
             // toolStripSeparator1
             // 
@@ -149,6 +153,7 @@
             toolStripButton6.Name = "toolStripButton6";
             toolStripButton6.Size = new Size(42, 29);
             toolStripButton6.Text = "DB";
+            toolStripButton6.Click += toolStripButton6_Click;
             // 
             // toolStripSeparator7
             // 
@@ -165,6 +170,7 @@
             toolStripButton7.Name = "toolStripButton7";
             toolStripButton7.Size = new Size(26, 29);
             toolStripButton7.Text = "E";
+            toolStripButton7.Click += toolStripButton7_Click;
             // 
             // Form1
             // 
