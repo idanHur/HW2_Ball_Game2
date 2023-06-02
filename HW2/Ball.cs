@@ -16,11 +16,11 @@ namespace HW2
         public string Color { get; set; }
 
         // Constructor
-        public Ball(int x, int y)
+        public Ball(int formWidth, int formHeight)
         {
             Random random = new Random();
-            X = random.Next(0, x); // Generate random X coordinate within the form width
-            Y = random.Next(0, y); // Generate random Y coordinate within the form height
+            X = random.Next(0, formWidth); // Generate random X coordinate within the form width
+            Y = random.Next(0, formHeight); // Generate random Y coordinate within the form height
             Color = GenerateRandomColor();
             Radius = random.Next(10, 41); // Generates a random number between 10 and 40 (inclusive)
             ChangeJumpSize();

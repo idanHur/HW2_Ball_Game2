@@ -14,13 +14,11 @@ namespace HW2
         public string Name { get; set; }
 
         // Constructor
-        public Game(string name, float y)
+        public Game(string name)
         {
             Name = name;
             balls = new List<Ball>();
             startTime = DateTime.Now; // Initialize the start time
-
-
         }
         public DateTime StartTime
         {
@@ -30,8 +28,9 @@ namespace HW2
         {
             get { return balls; }
         }
-        public void AddBall(Ball ball)
+        public void AddBall(int formWidth, int formHeight)
         {
+            Ball ball = new Ball(formWidth, formHeight);
             balls.Add(ball);
         }
 
