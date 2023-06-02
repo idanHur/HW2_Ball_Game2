@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace HW2
 {
-    internal class Game
+    public class Game
     {
         // Properties
         private List<Ball> balls;
