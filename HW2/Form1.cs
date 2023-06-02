@@ -29,37 +29,37 @@ namespace HW2
                 g.FillEllipse(brush, x, y, diameter, diameter);
             }
         }
-        private void toolStripButton1_Click(object sender, EventArgs e)
+        private void AddBallButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton4_Click(object sender, EventArgs e)
+        private void StopLastButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton2_Click(object sender, EventArgs e)
+        private void RemoveBallButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton3_Click(object sender, EventArgs e)
+        private void AboutButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton5_Click(object sender, EventArgs e)
+        private void EndGameButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton6_Click(object sender, EventArgs e)
+        private void DBButton_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void toolStripButton7_Click(object sender, EventArgs e)
+        private void EndProgramButton_Click(object sender, EventArgs e)
         {
 
         }
