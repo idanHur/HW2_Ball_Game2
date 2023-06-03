@@ -21,6 +21,10 @@ namespace HW2
             // Subscribe to the Timer's Tick event
             timer.Tick += Timer_Tick;
         }
+        public ToolStrip ToolStrip1
+        {
+            get { return toolStrip1; }
+        }
         private void GameForm_Paint(object? sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
@@ -77,7 +81,7 @@ namespace HW2
             }
             else
             {
-                Game.AddBall(this.Width, this.Height); // Add a ball to the game in progress 
+                Game.AddBall(this); // Add a ball to the game in progress 
             }
 
         }

@@ -19,23 +19,32 @@ namespace HW2
         private int DirectionY { get; set; }
         private int maxX { get; set; }
         private int maxY { get; set; }
+        private int minX { get; set; }
+        private int minY { get; set; }
         // Constructor
-        public Ball(int formWidth, int formHeight)
+        public Ball(Form1 form)
         {
             Random random = new Random();
             Color = GenerateRandomColor();
             Radius = random.Next(10, 41); // Generates a random number between 10 and 40 (inclusive)
             // Calculate the maximum X and Y coordinates that keep the ball within the form bounds, considering form border, title bar, and ToolStrip height
             // TODO: Fix positining 
-            maxX = formWidth - Radius * 2 - SystemInformation.BorderSize.Width * 2;
-            maxY = formHeight - Radius * 2 - SystemInformation.BorderSize.Height * 2 - SystemInformation.CaptionHeight ;
-
+            SetMaxInAxis(form);
             X = random.Next(Radius, maxX); // Generate random X coordinate within the form width
             Y = random.Next(Radius, maxY); // Generate random Y coordinate within the form height
             DecideDirectionX(true);
             DecideDirectionY(true);
         }
         // Methods
+        public void SetMaxInAxis(Form1 form)
+        {
+            minX = Radius;
+            minY = form.ToolStrip1.Top + form.ToolStrip1.Height + Radius;
+            maxX = form.ClientRectangle.Width - Radius - SystemInformation.BorderSize.Width * 2;
+            maxY = form.ClientRectangle.Height - Radius - SystemInformation.BorderSize.Height * 2;
+        }
+
+
         private void DecideDirectionX(bool initial = false)
         {
             if (initial)
@@ -43,12 +52,12 @@ namespace HW2
                 // If it is the first time set jump size and make random direction if not hitting the wall
                 ChangeJumpSize();
 
-                if (((X - Jump) > 0) && ((X + Jump) < maxX))
+                if (((X - Jump) > minX) && ((X + Jump) < maxX))
                 {
                     Random random = new Random();
                     DirectionX = random.Next(0, 2);
                 }
-                else if ((X - Jump) > 0)
+                else if ((X - Jump) > minX)
                 {
                     DirectionX = 1;
                 }
@@ -63,7 +72,7 @@ namespace HW2
             {
                 int tempX = DirectionX == 0 ? (X + Jump) : (X - Jump);
                 // If after a jump the ball will hit a wall then change direction
-                if (tempX < Radius || tempX > maxX)
+                if (tempX < minX || tempX > maxX)
                 {
                     DirectionX = DirectionX == 0 ? 1 : 0;
                     ChangeJumpSize();
@@ -78,12 +87,12 @@ namespace HW2
                 // If it is the first time set jump size and make random direction if not hitting the wall
                 ChangeJumpSize();
 
-                if (((Y - Jump) > 0) && ((Y + Jump) < maxY))
+                if (((Y - Jump) > minY) && ((Y + Jump) < maxY))
                 {
                     Random random = new Random();
                     DirectionY = random.Next(0, 2);
                 }
-                else if ((Y - Jump) > 0)
+                else if ((Y - Jump) > minY)
                 {
                     DirectionY = 1;
                 }
@@ -98,7 +107,7 @@ namespace HW2
             {
                 int tempY = DirectionY == 0 ? (Y + Jump) : (Y - Jump);
                 // If after a jump the ball will hit a wall then change direction
-                if (tempY < Radius || tempY > maxY)
+                if (tempY < minY || tempY > maxY)
                 {
                     DirectionY = DirectionY == 0 ? 1 : 0;
                     ChangeJumpSize();
@@ -118,13 +127,13 @@ namespace HW2
         private void AdjustPositionAndDirection() 
         {
             // In case one of the edges was reached change direction and position
-            if (X < Radius || X > maxX)
+            if (X < minX || X > maxX)
             {
                 DecideDirectionX();
                 X = X < Radius ? Radius : maxX; 
             }
 
-            if (Y < Radius || Y > maxY)
+            if (Y < minX || Y > maxY)
             {
                 DecideDirectionY();
                 Y = Y < Radius ? Radius : maxY;

@@ -28,9 +28,9 @@ namespace HW2
         {
             get { return balls; }
         }
-        public void AddBall(int formWidth, int formHeight)
+        public void AddBall(Form1 form)
         {
-            Ball ball = new Ball(formWidth, formHeight);
+            Ball ball = new Ball(form);
             balls.Add(ball);
         }
 

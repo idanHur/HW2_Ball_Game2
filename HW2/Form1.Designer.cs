@@ -50,6 +50,7 @@
             // 
             // toolStrip1
             // 
+            toolStrip1.BackColor = Color.Transparent;
             toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, AddBallButton, toolStripSeparator2, RemoveBallButton, toolStripSeparator3, StopLastButton, toolStripSeparator4, AboutButton, toolStripSeparator5, EndGameButton, toolStripSeparator6, DBButton, toolStripSeparator7, EndProgramButton });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
