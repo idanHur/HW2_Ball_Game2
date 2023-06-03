@@ -105,7 +105,7 @@ namespace HW2
         {
             if (Game == null)
                 return;
-            Game.HoldLastBall = !Game.HoldLastBall;
+            Game.ChangeHoldLastBall();
         }
 
         private void RemoveBallButton_Click(object sender, EventArgs e)
@@ -122,7 +122,10 @@ namespace HW2
 
         private void EndGameButton_Click(object sender, EventArgs e)
         {
-
+            if (Game == null)
+                return;
+            else
+                Game = null;
         }
 
         private void DBButton_Click(object sender, EventArgs e)
