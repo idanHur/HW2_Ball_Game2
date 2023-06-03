@@ -40,6 +40,7 @@ namespace HW2
         {
             if (initial)
             {
+                // If it is the first time set jump size and make random direction if not hitting the wall
                 ChangeJumpSize();
 
                 if (X - Jump > 0 && X + Jump < maxX)
@@ -61,6 +62,7 @@ namespace HW2
             else
             {
                 int tempX = DirectionX == 0 ? X + Jump : X - Jump;
+                // If after a jump the ball will hit a wall then change direction
                 if (tempX < 0 || tempX > maxX)
                 {
                     DirectionX = DirectionX == 0 ? 1 : 0;
@@ -73,6 +75,7 @@ namespace HW2
         {
             if (initial)
             {
+                // If it is the first time set jump size and make random direction if not hitting the wall
                 ChangeJumpSize();
 
                 if (Y - Jump > 0 && Y + Jump < maxY)
@@ -94,6 +97,7 @@ namespace HW2
             else
             {
                 int tempY = DirectionY == 0 ? Y + Jump : Y - Jump;
+                // If after a jump the ball will hit a wall then change direction
                 if (tempY < 0 || tempY > maxY)
                 {
                     DirectionY = DirectionY == 0 ? 1 : 0;
@@ -116,14 +120,14 @@ namespace HW2
             // In case one of the edges was reached change direction and position
             if (X < Radius || X > maxX)
             {
-                X = X < Radius ? Radius : maxX;
                 DecideDirectionX();
+                X = X < Radius ? Radius : maxX; 
             }
 
             if (Y < Radius || Y > maxY)
             {
-                Y = Y < Radius ? Radius : maxY;
                 DecideDirectionY();
+                Y = Y < Radius ? Radius : maxY;
             }
         }
 
