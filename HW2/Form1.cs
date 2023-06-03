@@ -50,9 +50,13 @@ namespace HW2
             {
                 // Update the positions of the balls...
                 label1.Text = Game.Balls.Count.ToString();
+
+                List<Ball> balls = Game.Balls; // Get the list of balls from your game class
+                foreach (Ball ball in balls)
+                {
+                    ball.Move();
+                }
             }
-
-
             // Trigger a repaint of the form
             Invalidate();
         }

@@ -43,12 +43,12 @@ namespace HW2
                 // If it is the first time set jump size and make random direction if not hitting the wall
                 ChangeJumpSize();
 
-                if (X - Jump > 0 && X + Jump < maxX)
+                if (((X - Jump) > 0) && ((X + Jump) < maxX))
                 {
                     Random random = new Random();
                     DirectionX = random.Next(0, 2);
                 }
-                else if (X - Jump > 0)
+                else if ((X - Jump) > 0)
                 {
                     DirectionX = 1;
                 }
@@ -61,9 +61,9 @@ namespace HW2
             }
             else
             {
-                int tempX = DirectionX == 0 ? X + Jump : X - Jump;
+                int tempX = DirectionX == 0 ? (X + Jump) : (X - Jump);
                 // If after a jump the ball will hit a wall then change direction
-                if (tempX < 0 || tempX > maxX)
+                if (tempX < Radius || tempX > maxX)
                 {
                     DirectionX = DirectionX == 0 ? 1 : 0;
                     ChangeJumpSize();
@@ -78,12 +78,12 @@ namespace HW2
                 // If it is the first time set jump size and make random direction if not hitting the wall
                 ChangeJumpSize();
 
-                if (Y - Jump > 0 && Y + Jump < maxY)
+                if (((Y - Jump) > 0) && ((Y + Jump) < maxY))
                 {
                     Random random = new Random();
                     DirectionY = random.Next(0, 2);
                 }
-                else if (Y - Jump > 0)
+                else if ((Y - Jump) > 0)
                 {
                     DirectionY = 1;
                 }
@@ -96,9 +96,9 @@ namespace HW2
             }
             else
             {
-                int tempY = DirectionY == 0 ? Y + Jump : Y - Jump;
+                int tempY = DirectionY == 0 ? (Y + Jump) : (Y - Jump);
                 // If after a jump the ball will hit a wall then change direction
-                if (tempY < 0 || tempY > maxY)
+                if (tempY < Radius || tempY > maxY)
                 {
                     DirectionY = DirectionY == 0 ? 1 : 0;
                     ChangeJumpSize();
@@ -109,8 +109,8 @@ namespace HW2
 
         public void Move()
         {
-            X = DirectionX == 0 ? X + Jump : X - Jump;
-            Y = DirectionY == 0 ? Y + Jump : Y - Jump;
+            X = DirectionX == 0 ? (X + Jump) : (X - Jump);
+            Y = DirectionY == 0 ? (Y + Jump) : (Y - Jump);
 
             AdjustPositionAndDirection();
         }
