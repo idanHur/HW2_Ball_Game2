@@ -7,6 +7,8 @@ namespace HW2
     {
         public Game? Game { get; private set; }
         private Timer timer;
+        private Dictionary<string, Bitmap> ballBitmaps = new Dictionary<string, Bitmap>();
+
         public Form1()
         {
             InitializeComponent();
@@ -49,17 +51,32 @@ namespace HW2
 
             foreach (Ball ball in balls)
             {
-                using (Brush brush = new SolidBrush(ColorTranslator.FromHtml(ball.Color)))
-                {
-                    // TODO: Fix positining 
-                    float x = ball.X - ball.Radius;
-                    float y = ball.Y - ball.Radius;
-                    float diameter = ball.Radius * 2;
+                // TODO: Fix positioning 
+                float x = ball.X - ball.Radius;
+                float y = ball.Y - ball.Radius;
+                int diameter = ball.Radius * 2;
 
-                    g.FillEllipse(brush, x, y, diameter, diameter);
+                if (!ballBitmaps.ContainsKey(ball.Color))
+                {
+                    // Create a new bitmap for the ball's color if it doesn't exist in the dictionary
+                    Bitmap bitmap = new Bitmap(diameter, diameter);
+                    using (Graphics bitmapGraphics = Graphics.FromImage(bitmap))
+                    {
+                        using (Brush brush = new SolidBrush(ColorTranslator.FromHtml(ball.Color)))
+                        {
+                            bitmapGraphics.FillEllipse(brush, 0, 0, diameter, diameter);
+                        }
+                    }
+                    ballBitmaps[ball.Color] = bitmap;
                 }
+
+                Bitmap ballBitmap = ballBitmaps[ball.Color];
+                g.DrawImage(ballBitmap, x, y);
             }
         }
+
+
+
         private void Timer_Tick(object sender, EventArgs e)
         {
             if (Game != null)
@@ -85,6 +102,7 @@ namespace HW2
                 {
                     string playerName = playerNameForm.PlayerName;
                     Game = new Game(playerName);
+                    ballBitmaps = new Dictionary<string, Bitmap>();
                 }
                 else
                 {
@@ -113,6 +131,15 @@ namespace HW2
             if (Game == null)
                 return;
             Game.RemoveLastBall();
+            // Removing the last item
+            if (ballBitmaps.Count > 0)
+            {
+                var lastItem = ballBitmaps.LastOrDefault();
+                if (lastItem.Value != null)
+                {
+                    ballBitmaps.Remove(lastItem.Key);
+                }
+            }
         }
 
         private void AboutButton_Click(object sender, EventArgs e)
