@@ -103,19 +103,16 @@ namespace HW2
 
         private void StopLastButton_Click(object sender, EventArgs e)
         {
-
+            if (Game == null)
+                return;
+            Game.HoldLastBall = !Game.HoldLastBall;
         }
 
         private void RemoveBallButton_Click(object sender, EventArgs e)
         {
             if (Game == null)
                 return;
-            List<Ball> balls = Game.Balls; // Get the list of balls from your game class
-            if(balls.Count > 0)
-            {
-                Ball lastBall = balls[balls.Count - 1]; // Get the last ball
-                Game.RemoveBall(lastBall);
-            }
+            Game.RemoveLastBall();
         }
 
         private void AboutButton_Click(object sender, EventArgs e)

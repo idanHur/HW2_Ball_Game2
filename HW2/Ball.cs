@@ -14,6 +14,7 @@ namespace HW2
         public int Y { get; private set; }
         public int Radius { get; private set; }
         public string Color { get; private set; }
+        public bool HoldBall { get; set; }
         private int Jump { get; set; }
         private int DirectionX { get; set; }
         private int DirectionY { get; set; }
@@ -22,9 +23,10 @@ namespace HW2
         private int minX { get; set; }
         private int minY { get; set; }
         // Constructor
-        public Ball(Form1 form)
+        public Ball(Form1 form, bool holdBall = false)
         {
             Random random = new Random();
+            HoldBall = holdBall;
             Color = GenerateRandomColor();
             Radius = random.Next(10, 41); // Generates a random number between 10 and 40 (inclusive)
             // Calculate the maximum X and Y coordinates that keep the ball within the form bounds, considering form border, title bar, and ToolStrip height
@@ -34,6 +36,7 @@ namespace HW2
             Y = random.Next(Radius, maxY); // Generate random Y coordinate within the form height
             DecideDirectionX(true);
             DecideDirectionY(true);
+            HoldBall = holdBall;
         }
         // Methods
         public void SetMaxInAxis(Form1 form)
@@ -117,6 +120,8 @@ namespace HW2
 
         public void Move()
         {
+            if (HoldBall)
+                return;
             X = DirectionX == 0 ? (X + Jump) : (X - Jump);
             Y = DirectionY == 0 ? (Y + Jump) : (Y - Jump);
 
