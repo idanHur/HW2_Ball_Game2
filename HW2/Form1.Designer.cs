@@ -44,7 +44,6 @@
             DBButton = new ToolStripButton();
             toolStripSeparator7 = new ToolStripSeparator();
             EndProgramButton = new ToolStripButton();
-            label1 = new Label();
             toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -176,21 +175,11 @@
             EndProgramButton.Text = "E";
             EndProgramButton.Click += EndProgramButton_Click;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Location = new Point(274, 113);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 1;
-            label1.Text = "label1";
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label1);
             Controls.Add(toolStrip1);
             Name = "Form1";
             Text = "Form1";
@@ -217,6 +206,5 @@
         private ToolStripButton DBButton;
         private ToolStripSeparator toolStripSeparator7;
         private ToolStripButton EndProgramButton;
-        private Label label1;
     }
 }

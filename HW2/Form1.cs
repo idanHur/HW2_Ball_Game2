@@ -15,6 +15,7 @@ namespace HW2
             // Enable double buffering
             DoubleBuffered = true;
             this.Paint += GameForm_Paint;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable resize
             Game = null;
             // Create and configure the Timer control
             timer = new Timer();
@@ -46,12 +47,10 @@ namespace HW2
             {
                 return;
             }
-            Console.WriteLine("in GameForm_Paint");
             List<Ball> balls = Game.Balls; // Get the list of balls from your game class
 
             foreach (Ball ball in balls)
             {
-                // TODO: Fix positioning 
                 float x = ball.X - ball.Radius;
                 float y = ball.Y - ball.Radius;
                 int diameter = ball.Radius * 2;
@@ -81,9 +80,6 @@ namespace HW2
         {
             if (Game != null)
             {
-                // Update the positions of the balls...
-                label1.Text = Game.Balls.Count.ToString();
-
                 List<Ball> balls = Game.Balls; // Get the list of balls from your game class
                 foreach (Ball ball in balls)
                 {

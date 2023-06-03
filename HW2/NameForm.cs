@@ -17,6 +17,7 @@ namespace HW2
         public NameForm()
         {
             InitializeComponent();
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable resize
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -46,5 +47,9 @@ namespace HW2
 
         }
 
+        private void EnterNameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

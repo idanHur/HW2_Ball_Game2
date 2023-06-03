@@ -36,7 +36,7 @@
             // 
             // NameButton
             // 
-            NameButton.Location = new Point(319, 261);
+            NameButton.Location = new Point(138, 73);
             NameButton.Name = "NameButton";
             NameButton.Size = new Size(75, 23);
             NameButton.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // playerNameTextBox
             // 
-            playerNameTextBox.Location = new Point(248, 232);
+            playerNameTextBox.Location = new Point(64, 44);
             playerNameTextBox.Name = "playerNameTextBox";
             playerNameTextBox.Size = new Size(224, 23);
             playerNameTextBox.TabIndex = 1;
@@ -55,16 +55,17 @@
             // EnterNameLabel
             // 
             EnterNameLabel.AutoSize = true;
-            EnterNameLabel.Location = new Point(294, 214);
+            EnterNameLabel.Location = new Point(112, 26);
             EnterNameLabel.Name = "EnterNameLabel";
             EnterNameLabel.Size = new Size(130, 15);
             EnterNameLabel.TabIndex = 2;
             EnterNameLabel.Text = "Please enter your name";
+            EnterNameLabel.Click += EnterNameLabel_Click;
             // 
             // ErrorNameLabel
             // 
             ErrorNameLabel.AutoSize = true;
-            ErrorNameLabel.Location = new Point(335, 287);
+            ErrorNameLabel.Location = new Point(12, 113);
             ErrorNameLabel.Name = "ErrorNameLabel";
             ErrorNameLabel.Size = new Size(0, 15);
             ErrorNameLabel.TabIndex = 3;
@@ -73,11 +74,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(ErrorNameLabel);
-            Controls.Add(EnterNameLabel);
-            Controls.Add(playerNameTextBox);
+            ClientSize = new Size(343, 144);
             Controls.Add(NameButton);
+            Controls.Add(playerNameTextBox);
+            Controls.Add(EnterNameLabel);
+            Controls.Add(ErrorNameLabel);
             Name = "NameForm";
             Text = "NameForm";
             Load += NameForm_Load;
