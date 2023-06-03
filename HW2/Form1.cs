@@ -56,21 +56,21 @@ namespace HW2
                 float y = ball.Y - ball.Radius;
                 int diameter = ball.Radius * 2;
 
-                if (!ballBitmaps.ContainsKey(ball.Color))
+                if (!ballBitmaps.TryGetValue(ball.Color, out Bitmap existingBallBitmap))
                 {
                     // Create a new bitmap for the ball's color if it doesn't exist in the dictionary
-                    Bitmap bitmap = new Bitmap(diameter, diameter);
-                    using (Graphics bitmapGraphics = Graphics.FromImage(bitmap))
+                    existingBallBitmap = new Bitmap(diameter, diameter);
+                    using (Graphics bitmapGraphics = Graphics.FromImage(existingBallBitmap))
                     {
                         using (Brush brush = new SolidBrush(ColorTranslator.FromHtml(ball.Color)))
                         {
                             bitmapGraphics.FillEllipse(brush, 0, 0, diameter, diameter);
                         }
                     }
-                    ballBitmaps[ball.Color] = bitmap;
+                    ballBitmaps[ball.Color] = existingBallBitmap;
                 }
 
-                Bitmap ballBitmap = ballBitmaps[ball.Color];
+                Bitmap ballBitmap = existingBallBitmap;
                 g.DrawImage(ballBitmap, x, y);
             }
         }
