@@ -35,7 +35,7 @@ namespace HW2
             DecideDirectionX(true);
             DecideDirectionY(true);
         }
-
+        // Methods
         private void DecideDirectionX(bool initial = false)
         {
             if (initial)
@@ -103,7 +103,6 @@ namespace HW2
         }
 
 
-        // Methods
         public void Move()
         {
             X = DirectionX == 0 ? X + Jump : X - Jump;
@@ -128,12 +127,6 @@ namespace HW2
             }
         }
 
-        public void Draw()
-        {
-            // Implementation for drawing the ball on the screen
-            // This can be console output or using a graphical library like Windows Forms or WPF
-            // Example: Console.WriteLine($"Ball: X={X}, Y={Y}, Radius={Radius}, Color={Color}");
-        }
         // Generate a random color
         private string GenerateRandomColor()
         {
