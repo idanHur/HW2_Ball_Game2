@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using Timer = System.Windows.Forms.Timer;
 
 namespace HW2
@@ -18,12 +19,23 @@ namespace HW2
             timer.Interval = 50; // Refresh rate of 20 frames per second
             timer.Enabled = true;
 
+            // Subscribe to the KeyDown event
+            this.KeyDown += Form1_KeyDown;
+
             // Subscribe to the Timer's Tick event
             timer.Tick += Timer_Tick;
         }
         public ToolStrip ToolStrip1
         {
             get { return toolStrip1; }
+        }
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (Game != null)
+                    AddBall(); // Add ball when enter is pressed
+            }
         }
         private void GameForm_Paint(object? sender, PaintEventArgs e)
         {
@@ -64,7 +76,7 @@ namespace HW2
             // Trigger a repaint of the form
             Invalidate();
         }
-        private void AddBallButton_Click(object sender, EventArgs e)
+        private void AddBall()
         {
             if (Game == null)
             {
@@ -76,14 +88,17 @@ namespace HW2
                 }
                 else
                 {
-                    return; // There is no game in prgress and no name was entered
+                    return; // There is no game in progress and no name was entered
                 }
             }
             else
             {
                 Game.AddBall(this); // Add a ball to the game in progress 
             }
-
+        }
+        private void AddBallButton_Click(object sender, EventArgs e)
+        {
+            AddBall();
         }
 
         private void StopLastButton_Click(object sender, EventArgs e)
@@ -93,7 +108,14 @@ namespace HW2
 
         private void RemoveBallButton_Click(object sender, EventArgs e)
         {
-
+            if (Game == null)
+                return;
+            List<Ball> balls = Game.Balls; // Get the list of balls from your game class
+            if(balls.Count > 0)
+            {
+                Ball lastBall = balls[balls.Count - 1]; // Get the last ball
+                Game.RemoveBall(lastBall);
+            }
         }
 
         private void AboutButton_Click(object sender, EventArgs e)

@@ -115,7 +115,6 @@ namespace HW2
             }
         }
 
-
         public void Move()
         {
             X = DirectionX == 0 ? (X + Jump) : (X - Jump);
