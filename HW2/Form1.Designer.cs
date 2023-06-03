@@ -56,6 +56,7 @@
             toolStrip1.Size = new Size(800, 32);
             toolStrip1.TabIndex = 0;
             toolStrip1.Text = "toolStrip1";
+            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
             // 
             // toolStripSeparator1
             // 

@@ -9,10 +9,10 @@ namespace HW2
         public Form1()
         {
             InitializeComponent();
-            this.Paint += GameForm_Paint;
-            Game = null;
             // Enable double buffering
             DoubleBuffered = true;
+            this.Paint += GameForm_Paint;
+            Game = null;
             // Create and configure the Timer control
             timer = new Timer();
             timer.Interval = 50; // Refresh rate of 20 frames per second
@@ -33,23 +33,25 @@ namespace HW2
 
             foreach (Ball ball in balls)
             {
-                Color color = ColorTranslator.FromHtml(ball.Color); // Convert the color string to a Color object
+                using (Brush brush = new SolidBrush(ColorTranslator.FromHtml(ball.Color)))
+                {
+                    // TODO: Fix positining 
+                    float x = ball.X - ball.Radius;
+                    float y = ball.Y - ball.Radius;
+                    float diameter = ball.Radius * 2;
 
-                Brush brush = new SolidBrush(color);
-                float x = ball.X - ball.Radius;
-                float y = ball.Y - ball.Radius;
-                float diameter = ball.Radius * 2;
-
-                g.FillEllipse(brush, x, y, diameter, diameter);
+                    g.FillEllipse(brush, x, y, diameter, diameter);
+                }
             }
         }
         private void Timer_Tick(object sender, EventArgs e)
         {
-            if (Game != null) {
+            if (Game != null)
+            {
                 // Update the positions of the balls...
                 label1.Text = Game.Balls.Count.ToString();
             }
-            
+
 
             // Trigger a repaint of the form
             Invalidate();
@@ -102,6 +104,11 @@ namespace HW2
         }
 
         private void EndProgramButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
