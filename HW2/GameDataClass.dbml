@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="MyDB" Class="GameDataClassDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MyDB.mdf;Integrated Security=True" SettingsObjectName="HW2.Properties.Settings" SettingsPropertyName="MyDBConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Games" Member="Games">
+    <Type Name="Game">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Length" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+</Database>
