@@ -2,6 +2,8 @@
 *.d
 # .gitignore
 HW2/MyDB.mdf
+HW2/MyDB_log.ldf
+
 
 # Object files
 *.o
