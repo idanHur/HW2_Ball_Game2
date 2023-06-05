@@ -1,5 +1,7 @@
 # Prerequisites
 *.d
+# .gitignore
+HW2/MyDB.mdf
 
 # Object files
 *.o
