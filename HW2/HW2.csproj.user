@@ -8,9 +8,4 @@
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <None Update="GameDataContext.dbml">
-      <SubType>Designer</SubType>
-    </None>
-  </ItemGroup>
 </Project>
