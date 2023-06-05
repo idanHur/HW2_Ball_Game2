@@ -68,5 +68,22 @@ namespace HW2
         {
             balls.Remove(ball);
         }
+        public void SaveGameTime(int gameTimeInSeconds)
+        {
+            using (var dbContext = new GameDataContextDataContext())
+            {
+                // Create a new instance of your table entity
+                 gameTimeEntity = new GameTimeEntity
+                {
+                    PlayerName = Name,
+                    GameTime = gameTimeInSeconds
+                };
+
+                // Add the entity to the DataContext and submit changes to the database
+                dbContext.GameTimeTable.InsertOnSubmit(gameTimeEntity);
+                dbContext.SubmitChanges();
+            }
+        }
+
     }
 }
