@@ -3,6 +3,7 @@
 # .gitignore
 HW2/MyDB.mdf
 HW2/MyDB_log.ldf
+.vs/
 
 
 # Object files

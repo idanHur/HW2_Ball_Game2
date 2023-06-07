@@ -184,6 +184,8 @@ namespace HW2
                 AddToDB();
                 Game = null;
             }
+            // Close the program
+            Application.Exit();
         }
 
     }
