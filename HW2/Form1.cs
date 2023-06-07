@@ -1,14 +1,21 @@
+﻿using System;
 using System.Collections.Generic;
-using Timer = System.Windows.Forms.Timer;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace HW2
 {
     public partial class Form1 : Form
     {
-        public Game? Game { get; private set; }
+        public Game Game { get; private set; }
         private Timer timer;
         private Dictionary<string, Bitmap> ballBitmaps = new Dictionary<string, Bitmap>();
-
+        private GamesDBDataContext db = new GamesDBDataContext();
         public Form1()
         {
             InitializeComponent();
@@ -40,7 +47,7 @@ namespace HW2
                     AddBall(); // Add ball when enter is pressed
             }
         }
-        private void GameForm_Paint(object? sender, PaintEventArgs e)
+        private void GameForm_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
             if (Game == null)
@@ -148,7 +155,21 @@ namespace HW2
             if (Game == null)
                 return;
             else
+            {
+                AddToDB();
                 Game = null;
+            }
+        }
+        private void AddToDB()
+        {
+            var recordEntity = new Record
+            {
+                Name = Game.Name,
+                Length = Game.CalculateGameLength()
+            };
+
+            db.Records.InsertOnSubmit(recordEntity);
+            db.SubmitChanges();
         }
 
         private void DBButton_Click(object sender, EventArgs e)
@@ -158,12 +179,12 @@ namespace HW2
 
         private void EndProgramButton_Click(object sender, EventArgs e)
         {
-
+            if (Game != null)
+            {
+                AddToDB();
+                Game = null;
+            }
         }
 
-        private void toolStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
-        }
     }
 }

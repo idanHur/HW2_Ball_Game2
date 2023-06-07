@@ -128,13 +128,13 @@ namespace HW2
             AdjustPositionAndDirection();
         }
 
-        private void AdjustPositionAndDirection() 
+        private void AdjustPositionAndDirection()
         {
             // In case one of the edges was reached change direction and position
             if (X < minX || X > maxX)
             {
                 DecideDirectionX();
-                X = X < Radius ? Radius : maxX; 
+                X = X < Radius ? Radius : maxX;
             }
 
             if (Y < minX || Y > maxY)

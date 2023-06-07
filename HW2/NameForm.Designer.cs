@@ -1,4 +1,7 @@
-﻿namespace HW2
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace HW2
 {
     partial class NameForm
     {

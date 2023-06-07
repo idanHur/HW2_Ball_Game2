@@ -1,4 +1,7 @@
-﻿namespace HW2
+﻿using System.Drawing;
+using System.Windows.Forms;
+
+namespace HW2
 {
     partial class Form1
     {
@@ -28,165 +31,173 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            toolStrip1 = new ToolStrip();
-            toolStripSeparator1 = new ToolStripSeparator();
-            AddBallButton = new ToolStripButton();
-            toolStripSeparator2 = new ToolStripSeparator();
-            RemoveBallButton = new ToolStripButton();
-            toolStripSeparator3 = new ToolStripSeparator();
-            StopLastButton = new ToolStripButton();
-            toolStripSeparator4 = new ToolStripSeparator();
-            AboutButton = new ToolStripButton();
-            toolStripSeparator5 = new ToolStripSeparator();
-            EndGameButton = new ToolStripButton();
-            toolStripSeparator6 = new ToolStripSeparator();
-            DBButton = new ToolStripButton();
-            toolStripSeparator7 = new ToolStripSeparator();
-            EndProgramButton = new ToolStripButton();
-            toolStrip1.SuspendLayout();
-            SuspendLayout();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.AddBallButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.RemoveBallButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
+            this.StopLastButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
+            this.AboutButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.EndGameButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.DBButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
+            this.EndProgramButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStrip1.SuspendLayout();
+            this.SuspendLayout();
             // 
             // toolStrip1
             // 
-            toolStrip1.BackColor = Color.Transparent;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripSeparator1, AddBallButton, toolStripSeparator2, RemoveBallButton, toolStripSeparator3, StopLastButton, toolStripSeparator4, AboutButton, toolStripSeparator5, EndGameButton, toolStripSeparator6, DBButton, toolStripSeparator7, EndProgramButton });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(800, 32);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
-            toolStrip1.ItemClicked += toolStrip1_ItemClicked;
+            this.toolStrip1.BackColor = System.Drawing.Color.Transparent;
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.AddBallButton,
+            this.toolStripSeparator2,
+            this.RemoveBallButton,
+            this.toolStripSeparator3,
+            this.StopLastButton,
+            this.toolStripSeparator4,
+            this.AboutButton,
+            this.toolStripSeparator5,
+            this.EndGameButton,
+            this.toolStripSeparator6,
+            this.DBButton,
+            this.toolStripSeparator7,
+            this.EndProgramButton});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(686, 32);
+            this.toolStrip1.TabIndex = 0;
+            this.toolStrip1.Text = "toolStrip1";
             // 
             // toolStripSeparator1
             // 
-            toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(6, 32);
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 32);
             // 
             // AddBallButton
             // 
-            AddBallButton.BackColor = SystemColors.ButtonHighlight;
-            AddBallButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            AddBallButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            AddBallButton.ImageTransparentColor = Color.Transparent;
-            AddBallButton.Name = "AddBallButton";
-            AddBallButton.Size = new Size(29, 29);
-            AddBallButton.Text = "+";
-            AddBallButton.Click += AddBallButton_Click;
+            this.AddBallButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AddBallButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.AddBallButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.AddBallButton.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.AddBallButton.Name = "AddBallButton";
+            this.AddBallButton.Size = new System.Drawing.Size(29, 29);
+            this.AddBallButton.Text = "+";
+            this.AddBallButton.Click += new System.EventHandler(this.AddBallButton_Click);
             // 
             // toolStripSeparator2
             // 
-            toolStripSeparator2.Name = "toolStripSeparator2";
-            toolStripSeparator2.Size = new Size(6, 32);
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 32);
             // 
             // RemoveBallButton
             // 
-            RemoveBallButton.BackColor = SystemColors.ButtonHighlight;
-            RemoveBallButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            RemoveBallButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            RemoveBallButton.ImageTransparentColor = Color.Transparent;
-            RemoveBallButton.Name = "RemoveBallButton";
-            RemoveBallButton.Size = new Size(24, 29);
-            RemoveBallButton.Text = "-";
-            RemoveBallButton.Click += RemoveBallButton_Click;
+            this.RemoveBallButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.RemoveBallButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.RemoveBallButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.RemoveBallButton.ImageTransparentColor = System.Drawing.Color.Transparent;
+            this.RemoveBallButton.Name = "RemoveBallButton";
+            this.RemoveBallButton.Size = new System.Drawing.Size(24, 29);
+            this.RemoveBallButton.Text = "-";
+            this.RemoveBallButton.Click += new System.EventHandler(this.RemoveBallButton_Click);
             // 
             // toolStripSeparator3
             // 
-            toolStripSeparator3.Name = "toolStripSeparator3";
-            toolStripSeparator3.Size = new Size(6, 32);
+            this.toolStripSeparator3.Name = "toolStripSeparator3";
+            this.toolStripSeparator3.Size = new System.Drawing.Size(6, 32);
             // 
             // StopLastButton
             // 
-            StopLastButton.BackColor = Color.Red;
-            StopLastButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            StopLastButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            StopLastButton.Image = (Image)resources.GetObject("StopLastButton.Image");
-            StopLastButton.ImageTransparentColor = Color.Magenta;
-            StopLastButton.Name = "StopLastButton";
-            StopLastButton.Size = new Size(27, 29);
-            StopLastButton.Text = "S";
-            StopLastButton.Click += StopLastButton_Click;
+            this.StopLastButton.BackColor = System.Drawing.Color.Red;
+            this.StopLastButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.StopLastButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.StopLastButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.StopLastButton.Name = "StopLastButton";
+            this.StopLastButton.Size = new System.Drawing.Size(27, 29);
+            this.StopLastButton.Text = "S";
+            this.StopLastButton.Click += new System.EventHandler(this.StopLastButton_Click);
             // 
             // toolStripSeparator4
             // 
-            toolStripSeparator4.Name = "toolStripSeparator4";
-            toolStripSeparator4.Size = new Size(6, 32);
+            this.toolStripSeparator4.Name = "toolStripSeparator4";
+            this.toolStripSeparator4.Size = new System.Drawing.Size(6, 32);
             // 
             // AboutButton
             // 
-            AboutButton.BackColor = SystemColors.ButtonHighlight;
-            AboutButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            AboutButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            AboutButton.Image = (Image)resources.GetObject("AboutButton.Image");
-            AboutButton.ImageTransparentColor = Color.Magenta;
-            AboutButton.Name = "AboutButton";
-            AboutButton.Size = new Size(29, 29);
-            AboutButton.Text = "A";
-            AboutButton.Click += AboutButton_Click;
+            this.AboutButton.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AboutButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.AboutButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.AboutButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AboutButton.Name = "AboutButton";
+            this.AboutButton.Size = new System.Drawing.Size(29, 29);
+            this.AboutButton.Text = "A";
+            this.AboutButton.Click += new System.EventHandler(this.AboutButton_Click);
             // 
             // toolStripSeparator5
             // 
-            toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(6, 32);
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 32);
             // 
             // EndGameButton
             // 
-            EndGameButton.BackColor = Color.FromArgb(255, 255, 128);
-            EndGameButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            EndGameButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            EndGameButton.Image = (Image)resources.GetObject("EndGameButton.Image");
-            EndGameButton.ImageTransparentColor = Color.Magenta;
-            EndGameButton.Name = "EndGameButton";
-            EndGameButton.Size = new Size(106, 29);
-            EndGameButton.Text = "End Game";
-            EndGameButton.Click += EndGameButton_Click;
+            this.EndGameButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.EndGameButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.EndGameButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.EndGameButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EndGameButton.Name = "EndGameButton";
+            this.EndGameButton.Size = new System.Drawing.Size(106, 29);
+            this.EndGameButton.Text = "End Game";
+            this.EndGameButton.Click += new System.EventHandler(this.EndGameButton_Click);
             // 
             // toolStripSeparator6
             // 
-            toolStripSeparator6.Name = "toolStripSeparator6";
-            toolStripSeparator6.Size = new Size(6, 32);
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 32);
             // 
             // DBButton
             // 
-            DBButton.BackColor = Color.FromArgb(192, 255, 192);
-            DBButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            DBButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            DBButton.Image = (Image)resources.GetObject("DBButton.Image");
-            DBButton.ImageTransparentColor = Color.Magenta;
-            DBButton.Name = "DBButton";
-            DBButton.Size = new Size(42, 29);
-            DBButton.Text = "DB";
-            DBButton.Click += DBButton_Click;
+            this.DBButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.DBButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.DBButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.DBButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.DBButton.Name = "DBButton";
+            this.DBButton.Size = new System.Drawing.Size(42, 29);
+            this.DBButton.Text = "DB";
+            this.DBButton.Click += new System.EventHandler(this.DBButton_Click);
             // 
             // toolStripSeparator7
             // 
-            toolStripSeparator7.Name = "toolStripSeparator7";
-            toolStripSeparator7.Size = new Size(6, 32);
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 32);
             // 
             // EndProgramButton
             // 
-            EndProgramButton.BackColor = Color.Red;
-            EndProgramButton.DisplayStyle = ToolStripItemDisplayStyle.Text;
-            EndProgramButton.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point);
-            EndProgramButton.Image = (Image)resources.GetObject("EndProgramButton.Image");
-            EndProgramButton.ImageTransparentColor = Color.Magenta;
-            EndProgramButton.Name = "EndProgramButton";
-            EndProgramButton.Size = new Size(26, 29);
-            EndProgramButton.Text = "E";
-            EndProgramButton.Click += EndProgramButton_Click;
+            this.EndProgramButton.BackColor = System.Drawing.Color.Red;
+            this.EndProgramButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.EndProgramButton.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold);
+            this.EndProgramButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.EndProgramButton.Name = "EndProgramButton";
+            this.EndProgramButton.Size = new System.Drawing.Size(26, 29);
+            this.EndProgramButton.Text = "E";
+            this.EndProgramButton.Click += new System.EventHandler(this.EndProgramButton_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(toolStrip1);
-            Name = "Form1";
-            Text = "Form1";
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(686, 390);
+            this.Controls.Add(this.toolStrip1);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
@@ -208,3 +219,4 @@
         private ToolStripButton EndProgramButton;
     }
 }
+

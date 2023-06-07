@@ -57,7 +57,17 @@ namespace HW2
                 balls.Add(ball);
             }
         }
+        public int CalculateGameLength()
+        {
+            DateTime currentTime = DateTime.Now;
 
+            TimeSpan difference = currentTime - StartTime;
+
+            double seconds = difference.TotalSeconds;
+            int secondsAsInt = (int)seconds;
+
+            return secondsAsInt;
+        }
         public void RemoveLastBall()
         {
             if (balls.Count > 0) {
