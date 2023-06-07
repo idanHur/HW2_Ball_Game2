@@ -184,8 +184,8 @@ namespace HW2
                 AddToDB();
                 Game = null;
             }
-            // Close the program
-            Application.Exit();
+            ExitForm exForm = new ExitForm();
+            exForm.Show(); // or exForm.ShowDialog();
         }
 
     }

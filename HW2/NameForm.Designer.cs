@@ -31,62 +31,60 @@ namespace HW2
         /// </summary>
         private void InitializeComponent()
         {
-            NameButton = new Button();
-            playerNameTextBox = new TextBox();
-            EnterNameLabel = new Label();
-            ErrorNameLabel = new Label();
-            SuspendLayout();
+            this.NameButton = new System.Windows.Forms.Button();
+            this.playerNameTextBox = new System.Windows.Forms.TextBox();
+            this.EnterNameLabel = new System.Windows.Forms.Label();
+            this.ErrorNameLabel = new System.Windows.Forms.Label();
+            this.SuspendLayout();
             // 
             // NameButton
             // 
-            NameButton.Location = new Point(138, 73);
-            NameButton.Name = "NameButton";
-            NameButton.Size = new Size(75, 23);
-            NameButton.TabIndex = 0;
-            NameButton.Text = "OK";
-            NameButton.UseVisualStyleBackColor = true;
-            NameButton.Click += button1_Click;
+            this.NameButton.Location = new System.Drawing.Point(118, 63);
+            this.NameButton.Name = "NameButton";
+            this.NameButton.Size = new System.Drawing.Size(64, 20);
+            this.NameButton.TabIndex = 0;
+            this.NameButton.Text = "OK";
+            this.NameButton.UseVisualStyleBackColor = true;
             // 
             // playerNameTextBox
             // 
-            playerNameTextBox.Location = new Point(64, 44);
-            playerNameTextBox.Name = "playerNameTextBox";
-            playerNameTextBox.Size = new Size(224, 23);
-            playerNameTextBox.TabIndex = 1;
-            playerNameTextBox.TextChanged += textBox1_TextChanged;
+            this.playerNameTextBox.Location = new System.Drawing.Point(55, 38);
+            this.playerNameTextBox.Name = "playerNameTextBox";
+            this.playerNameTextBox.Size = new System.Drawing.Size(193, 20);
+            this.playerNameTextBox.TabIndex = 1;
+            this.playerNameTextBox.TextChanged += new System.EventHandler(this.playerNameTextBox_TextChanged);
             // 
             // EnterNameLabel
             // 
-            EnterNameLabel.AutoSize = true;
-            EnterNameLabel.Location = new Point(112, 26);
-            EnterNameLabel.Name = "EnterNameLabel";
-            EnterNameLabel.Size = new Size(130, 15);
-            EnterNameLabel.TabIndex = 2;
-            EnterNameLabel.Text = "Please enter your name";
-            EnterNameLabel.Click += EnterNameLabel_Click;
+            this.EnterNameLabel.AutoSize = true;
+            this.EnterNameLabel.Location = new System.Drawing.Point(96, 23);
+            this.EnterNameLabel.Name = "EnterNameLabel";
+            this.EnterNameLabel.Size = new System.Drawing.Size(118, 13);
+            this.EnterNameLabel.TabIndex = 2;
+            this.EnterNameLabel.Text = "Please enter your name";
             // 
             // ErrorNameLabel
             // 
-            ErrorNameLabel.AutoSize = true;
-            ErrorNameLabel.Location = new Point(12, 113);
-            ErrorNameLabel.Name = "ErrorNameLabel";
-            ErrorNameLabel.Size = new Size(0, 15);
-            ErrorNameLabel.TabIndex = 3;
+            this.ErrorNameLabel.AutoSize = true;
+            this.ErrorNameLabel.Location = new System.Drawing.Point(10, 98);
+            this.ErrorNameLabel.Name = "ErrorNameLabel";
+            this.ErrorNameLabel.Size = new System.Drawing.Size(0, 13);
+            this.ErrorNameLabel.TabIndex = 3;
             // 
             // NameForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(343, 144);
-            Controls.Add(NameButton);
-            Controls.Add(playerNameTextBox);
-            Controls.Add(EnterNameLabel);
-            Controls.Add(ErrorNameLabel);
-            Name = "NameForm";
-            Text = "NameForm";
-            Load += NameForm_Load;
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(294, 125);
+            this.Controls.Add(this.NameButton);
+            this.Controls.Add(this.playerNameTextBox);
+            this.Controls.Add(this.EnterNameLabel);
+            this.Controls.Add(this.ErrorNameLabel);
+            this.Name = "NameForm";
+            this.Text = "NameForm";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

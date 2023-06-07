@@ -51,5 +51,10 @@ namespace HW2
         {
 
         }
+
+        private void playerNameTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
