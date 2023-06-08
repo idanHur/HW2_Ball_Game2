@@ -99,6 +99,7 @@
             // 
             this.PageTextBox.Name = "PageTextBox";
             this.PageTextBox.Size = new System.Drawing.Size(100, 25);
+            this.PageTextBox.Text = "0";
             this.PageTextBox.Click += new System.EventHandler(this.PageTextBox_Click);
             // 
             // OfLabel

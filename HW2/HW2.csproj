@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AllGamesDataProvider .cs" />
     <Compile Include="Ball.cs" />
     <Compile Include="DBForm.cs">
       <SubType>Form</SubType>
@@ -72,6 +73,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>GamesDB.dbml</DependentUpon>
     </Compile>
+    <Compile Include="IPagedDataProvider.cs" />
+    <Compile Include="LongestGameDataProvider .cs" />
     <Compile Include="NameForm.cs">
       <SubType>Form</SubType>
     </Compile>
