@@ -23,7 +23,7 @@ namespace HW2
             InitializeComponent();
             this.Load += new EventHandler(AllButton_Click);
             PageTextBox.Leave += new EventHandler(txtPageNumber_Leave);
-
+            this.FormBorderStyle = FormBorderStyle.FixedSingle; // Disable resize
         }
         
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

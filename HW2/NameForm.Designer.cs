@@ -45,6 +45,7 @@ namespace HW2
             this.NameButton.TabIndex = 0;
             this.NameButton.Text = "OK";
             this.NameButton.UseVisualStyleBackColor = true;
+            this.NameButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // playerNameTextBox
             // 

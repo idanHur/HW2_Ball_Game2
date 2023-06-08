@@ -52,9 +52,9 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 52);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 28);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(390, 143);
+            this.dataGridView1.Size = new System.Drawing.Size(340, 146);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -76,7 +76,7 @@
             this.AllButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(389, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(341, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -177,7 +177,7 @@
             // 
             // OkButton
             // 
-            this.OkButton.Location = new System.Drawing.Point(137, 222);
+            this.OkButton.Location = new System.Drawing.Point(120, 184);
             this.OkButton.Name = "OkButton";
             this.OkButton.Size = new System.Drawing.Size(99, 46);
             this.OkButton.TabIndex = 2;
@@ -189,7 +189,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(389, 280);
+            this.ClientSize = new System.Drawing.Size(341, 242);
             this.Controls.Add(this.OkButton);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.dataGridView1);
