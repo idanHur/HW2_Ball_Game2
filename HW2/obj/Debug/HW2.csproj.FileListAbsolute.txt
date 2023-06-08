@@ -22,3 +22,4 @@ C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.exe
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.pdb
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.ExitForm.resources
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.DBForm.resources
+C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.AboutForm.resources

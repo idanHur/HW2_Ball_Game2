@@ -147,7 +147,8 @@ namespace HW2
 
         private void AboutButton_Click(object sender, EventArgs e)
         {
-
+            AboutForm aboutForm = new AboutForm();
+            aboutForm.Show();
         }
 
         private void EndGameButton_Click(object sender, EventArgs e)
