@@ -174,7 +174,8 @@ namespace HW2
 
         private void DBButton_Click(object sender, EventArgs e)
         {
-
+            DBForm dbForm = new DBForm();
+            dbForm.Show();
         }
 
         private void EndProgramButton_Click(object sender, EventArgs e)
