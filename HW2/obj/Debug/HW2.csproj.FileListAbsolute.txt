@@ -12,7 +12,9 @@ C:\Users\idan1\source\repos\HW2_Game\HW2\obj\Debug\HW2.csprojAssemblyReference.c
 C:\Users\idan1\source\repos\HW2\HW2\bin\Debug\HW2.exe.config
 C:\Users\idan1\source\repos\HW2\HW2\bin\Debug\HW2.exe
 C:\Users\idan1\source\repos\HW2\HW2\bin\Debug\HW2.pdb
-C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.csprojAssemblyReference.cache
+C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.AboutForm.resources
+C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.DBForm.resources
+C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.ExitForm.resources
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.Form1.resources
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.NameForm.resources
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.Properties.Resources.resources
@@ -20,6 +22,3 @@ C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.csproj.GenerateResource.cache
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.csproj.CoreCompileInputs.cache
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.exe
 C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.pdb
-C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.ExitForm.resources
-C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.DBForm.resources
-C:\Users\idan1\source\repos\HW2\HW2\obj\Debug\HW2.AboutForm.resources

@@ -22,7 +22,7 @@ namespace HW2
         private void ExitForm_Load(object sender, EventArgs e)
         {
             // Set the desired button as the active control
-            NoButton.Focus();
+            NoButton.Select();
         }
         private void YesButton_Click(object sender, EventArgs e)
         {
